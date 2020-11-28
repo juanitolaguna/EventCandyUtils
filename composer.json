@@ -3,6 +3,7 @@
   "description": "EventCandy Utils",
   "type": "shopware-platform-plugin",
   "license": "MIT",
+  "version": "1.0.0",
   "autoload": {
     "psr-4": {
       "EventCandyUtils\\": "src/"
