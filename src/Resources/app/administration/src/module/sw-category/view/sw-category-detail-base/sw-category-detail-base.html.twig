@@ -1,0 +1,12 @@
+{% block sw_category_detail_base %}
+    {% block sw_category_detail_layout %}
+        <span>
+        {% parent() %}
+        {% block ec_category_detail_layout_media %}
+            <template v-if="category.type == 'link'">
+                <sw-category-detail-menu v-bind="{ category, isLoading }"></sw-category-detail-menu>
+            </template>
+        {% endblock %}
+        </span>
+    {% endblock %}
+{% endblock %}
