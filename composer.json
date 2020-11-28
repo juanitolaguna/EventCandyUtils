@@ -1,0 +1,18 @@
+{
+  "name": "event-candy/utils-plugin",
+  "description": "EventCandy Utils",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "EventCandyUtils\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "EventCandyUtils\\EventCandyUtils",
+    "label": {
+      "de-DE": "EventCandy Utils",
+      "en-GB": "EventCandy Utils"
+    }
+  }
+}
