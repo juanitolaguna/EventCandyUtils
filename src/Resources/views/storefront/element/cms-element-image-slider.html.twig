@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-image-slider.html.twig' %}
+
+{% block element_image_slider_alignment %}
+    {% set ecUtilsConfig = shopware.config.EventCandyUtils.config %}
+    {% set baseSliderOptions = {
+        slider: {
+            navPosition: 'bottom',
+            speed: ecUtilsConfig.sliderSpeed ? ecUtilsConfig.sliderSpeed : 500,
+            nav: sliderConfig.navigationDots.value ? true : false,
+            controls: sliderConfig.navigationArrows.value ? true : false,
+            autoHeight: (sliderConfig.displayMode.value == "standard") ? true : false,
+            autoplayButtonOutput: false,
+            autoplay: ecUtilsConfig.sliderAutoplay ? ecUtilsConfig.sliderAutoplay : false,
+            autoplayTimeout: ecUtilsConfig.sliderAutoplayTimeout ? ecUtilsConfig.sliderAutoplayTimeout : 4000,
+        }
+    } %}
+
+    {{ parent() }}
+{% endblock %}

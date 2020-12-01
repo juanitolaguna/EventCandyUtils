@@ -2,14 +2,40 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
     <card>
-        <title>#EventCandyUtils# Settings</title>
-        <title lang="de-DE">#EventCandyUtils# Einstellungen</title>
+        <title>Link Category Config</title>
+        <title lang="de-DE">Link Kategorie</title>
 
         <input-field type="bool">
             <name>linkCategoryMediaActive</name>
             <defaultValue>true</defaultValue>
-            <label>Link Category Media Active</label>
+            <label>Activate Images for Link-Category</label>
             <label lang="de-DE">Aktiviere Bilder für Link "Kategorien"</label>
         </input-field>
+    </card>
+
+    <card>
+        <title lang="de-DE">Slider Config</title>
+
+        <input-field type="bool">
+            <name>sliderAutoplay</name>
+            <defaultValue>true</defaultValue>
+            <label>Slider Autoplay</label>
+            <label lang="de-DE">Slider Autoplay</label>
+        </input-field>
+
+        <input-field type="int">
+            <name>sliderSpeed</name>
+            <defaultValue>500</defaultValue>
+            <label>Slider Speed (in ms)</label>
+            <label lang="de-DE">Slider Geschwindigkeit (in ms)</label>
+        </input-field>
+
+        <input-field type="int">
+            <name>sliderAutoplayTimeout</name>
+            <defaultValue>4000</defaultValue>
+            <label>Slider Autoplay Timeout (in ms)</label>
+            <label lang="de-DE">Slider Autoplay Timeout (in ms)</label>
+        </input-field>
+
     </card>
 </config>
