@@ -38,4 +38,15 @@
         </input-field>
 
     </card>
+
+    <card>
+        <title lang="de-DE">Flyout Menu Config</title>
+
+        <input-field type="bool">
+            <name>flyoutIsTurnedOf</name>
+            <defaultValue>true</defaultValue>
+            <label>Turn off Flyout Menu</label>
+            <label lang="de-DE">Schalte das Flyout Menu ab.</label>
+        </input-field>
+    </card>
 </config>

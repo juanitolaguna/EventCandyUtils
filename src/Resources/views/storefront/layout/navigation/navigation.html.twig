@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+
+{% set flyoutMenuOptions = {
+    flyoutIsTurnedOff: shopware.config.EventCandyUtils.config.flyoutIsTurnedOf
+} %}
+
+{% block layout_main_navigation %}
+<div class="main-navigation"
+     id="mainNavigation"
+     data-flyout-menu="true" data-flyout-menu-options="{{ flyoutMenuOptions|json_encode }}">
+    {% block layout_main_navigation_navbar %}
+        {{ parent() }}
+    {% endblock %}
+    {% block layout_main_navigation_menu_flyout_wrapper %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
