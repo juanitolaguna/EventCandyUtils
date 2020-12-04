@@ -11,7 +11,6 @@ export default class EcFlyoutMenuPlugin extends FlyoutMenuPlugin {
     }
 
     init() {
-        console.log(this.options);
         super.init();
     }
 
@@ -22,10 +21,8 @@ export default class EcFlyoutMenuPlugin extends FlyoutMenuPlugin {
      */
     _registerEvents() {
         if (this.options.flyoutIsTurnedOff) {
-            console.log('this')
             this._registerEventsWithoutMouseEnter()
         } else {
-            console.log('that')
             super._registerEvents()
         }
     }
