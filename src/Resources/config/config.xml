@@ -49,4 +49,16 @@
             <label lang="de-DE">Schalte das Flyout Menu ab.</label>
         </input-field>
     </card>
+
+    <card>
+        <title lang="de-DE">Produktdatenblatt Config</title>
+        <title lang="de-DE">Product Data Sheet Config</title>
+
+        <input-field type="bool">
+            <name>turnOnDataSheet</name>
+            <defaultValue>true</defaultValue>
+            <label>Turn on Product Data Sheet in Listing and Details</label>
+            <label lang="de-DE">Zeige das Poduktdatenblatt im Listing u. Details an</label>
+        </input-field>
+    </card>
 </config>

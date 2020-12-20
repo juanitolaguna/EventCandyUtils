@@ -2,7 +2,8 @@
 
 {% block page_product_detail_buy_inner %}
     {{ parent() }}
-    {% if page.product.customFields['dataSheetURl'] %}
+    {% set ecUtilsConfig = shopware.config.EventCandyUtils.config %}
+    {% if ecUtilsConfig["turnOnDataSheet"] and page.product.customFields['dataSheetURl'] %}
         <a href="{{ page.product.customFields['dataSheetURl'] }}" target="_blank">
         <span style="display:inline-block; margin-left:0px; margin-top: 0.5em;"
               class="badge badge-pill badge-secondary product-data-sheet"
@@ -11,10 +12,5 @@
             {{ 'ecUtils.product.dataSheet'|trans|sw_sanitize }}
         </span>
         </a>
-    {% else %}
-        <span style="visibility:hidden; margin-left:0px; margin-top: 0.5em;"
-              class="badge badge-pill badge-secondary product-data-sheet">
-            ...
-        </span>
     {% endif %}
 {% endblock %}
