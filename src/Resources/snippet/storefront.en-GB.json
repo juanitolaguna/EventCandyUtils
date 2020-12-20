@@ -1,0 +1,8 @@
+{
+  "ecUtils": {
+    "product": {
+      "dataSheet": "Product Data Sheet",
+      "dataSheetTooltip": "Download your <strong>Product Data Sheet</strong> with <i>product details, ingredients, nutritional values & allergy information.<i/>"
+    }
+  }
+}

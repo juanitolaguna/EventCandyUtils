@@ -1,0 +1,21 @@
+{% sw_extends '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+
+{% block component_product_box_price %}
+    {{ parent() }}
+    {% if product.customFields['dataSheetURl'] %}
+        <a href="{{ product.customFields['dataSheetURl'] }}" target="_blank">
+        <span style="display:inline-block; margin-left:0px; margin-top: 0.5em;"
+              class="badge badge-pill badge-secondary product-data-sheet"
+              data-toggle="tooltip" data-html="true" title="{{ 'ecUtils.product.dataSheetTooltip'|trans|sw_sanitize }}"
+        >
+            {{ 'ecUtils.product.dataSheet'|trans|sw_sanitize }}
+        </span>
+        </a>
+    {% else %}
+        <span style="visibility:hidden; margin-left:0px; margin-top: 0.5em;"
+              class="badge badge-pill badge-secondary product-data-sheet">
+            ...
+        </span>
+    {% endif %}
+
+{% endblock %}

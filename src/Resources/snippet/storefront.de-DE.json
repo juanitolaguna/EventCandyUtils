@@ -1,0 +1,8 @@
+{
+  "ecUtils": {
+    "product": {
+      "dataSheet": "Produktdatenblatt",
+      "dataSheetTooltip": "Lade dir das <strong>Produktdatenblatt</strong> herunter mit <i>Produktdetails, Zutaten, Nährwerten & Allergie Hinweisen</i>"
+    }
+  }
+}
