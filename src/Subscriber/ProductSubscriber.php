@@ -4,6 +4,7 @@ namespace EventCandyUtils\Subscriber;
 
 use Shopware\Core\Content\Media\MediaEntity;
 use Shopware\Core\Content\Product\SalesChannel\SalesChannelProductEntity;
+use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
@@ -48,20 +49,20 @@ class ProductSubscriber implements EventSubscriberInterface
             $keyIsTrue = array_key_exists('ec_product_data_pdf', $product->getCustomFields())
                 && $product->getCustomFields()['ec_product_data_pdf'];
             if ($keyIsTrue) {
-                $this->enrichProduct($product, $event->getSalesChannelContext());
+                $this->enrichProduct($product, $event->getSalesChannelContext()->getContext());
             }
         }
 
     }
 
-    private function enrichProduct(SalesChannelProductEntity $product, SalesChannelContext $context)
+    public function enrichProduct(SalesChannelProductEntity $product, Context $context)
     {
         $mediaId = $product->getCustomFields()['ec_product_data_pdf'];
         $criteria = new Criteria();
         $criteria->addFilter(new EqualsFilter('id', $mediaId));
 
         /** @var MediaEntity $result */
-        $result = $this->mediaRepository->search($criteria, $context->getContext())->first();
+        $result = $this->mediaRepository->search($criteria, $context)->first();
 
         $customFields = $product->getCustomFields();
         $customFields['dataSheetURl'] = $result->getUrl();

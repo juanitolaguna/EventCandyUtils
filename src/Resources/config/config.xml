@@ -60,5 +60,12 @@
             <label>Turn on Product Data Sheet in Listing and Details</label>
             <label lang="de-DE">Zeige das Poduktdatenblatt im Listing u. Details an</label>
         </input-field>
+
+        <input-field>
+            <name>badgeColor</name>
+            <placeholder>#ff0000</placeholder>
+            <label>Badge Colour in hex, for example #ff0000</label>
+            <label lang="de-DE">Badge Farbe in hex, z.B #ff0000</label>
+        </input-field>
     </card>
 </config>
