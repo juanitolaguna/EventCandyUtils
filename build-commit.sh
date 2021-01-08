@@ -4,7 +4,7 @@ pluginName="EventCandyUtils"
 
 #docker exec -it shopware /var/www/html/bin/build-js.sh
 
-copy new storefront build
+#copy new storefront build
 sudo rm -rf ./src/Resources/app/storefront/dist/storefront
 docker cp shopware:/var/www/html/custom/plugins/$pluginName/src/Resources/app/storefront/dist/. \
 ./src/Resources/app/storefront/dist
