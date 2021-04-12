@@ -5,7 +5,7 @@
     {% set ecUtilsConfig = shopware.config.EventCandyUtils.config %}
     {% if ecUtilsConfig["turnOnDataSheet"] and page.product.customFields['dataSheetURl'] %}
         <a href="{{ page.product.customFields['dataSheetURl'] }}" target="_blank">
-        <span style="background-color: {{ ecUtilsConfig['badgeColor'] }};"
+        <span style="background-color: {{ ecUtilsConfig['badgeColor'] }}; color: {{ ecUtilsConfig['badgeTextColor'] }}; {{ ecUtilsConfig['badgeInlineStyle'] }}"
               class="badge badge-pill badge-secondary product-data-sheet"
               data-toggle="tooltip" data-html="true" title="{{ 'ecUtils.product.dataSheetTooltip'|trans|sw_sanitize }}"
         >

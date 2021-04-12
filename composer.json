@@ -4,6 +4,12 @@
   "type": "shopware-platform-plugin",
   "license": "MIT",
   "version": "1.0.0",
+  "authors":[
+    {
+      "name":"Pawel Snatenkov",
+      "email": "pawel.snatenkov@protonmail.com"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "EventCandyUtils\\": "src/"

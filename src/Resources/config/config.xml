@@ -67,5 +67,19 @@
             <label>Badge Colour in hex, for example #ff0000</label>
             <label lang="de-DE">Badge Farbe in hex, z.B #ff0000</label>
         </input-field>
+
+        <input-field>
+            <name>badgeTextColor</name>
+            <placeholder>#ffffff</placeholder>
+            <label>Badge Text Colour in hex, for example #ffffff</label>
+            <label lang="de-DE">Badge Text Farbe in hex, z.B #ffffff</label>
+        </input-field>
+
+        <input-field>
+            <name>badgeInlineStyle</name>
+            <placeholder>text-decoration: underline;</placeholder>
+            <label>Badge Inline Style</label>
+            <label lang="de-DE">Badge Inline style</label>
+        </input-field>
     </card>
 </config>
