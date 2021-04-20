@@ -51,6 +51,19 @@
     </card>
 
     <card>
+        <title>Category Breadcrumb</title>
+        <title lang="de-DE">Kategorie Breadcrumb</title>
+
+
+        <input-field type="bool">
+            <name>turnOffCategoryBreadcrumb</name>
+            <defaultValue>false</defaultValue>
+            <label>Turn off Category Breadcrumb</label>
+            <label lang="de-DE">Schalte die Breadcrumb Kategorien ab.</label>
+        </input-field>
+    </card>
+
+    <card>
         <title lang="de-DE">Produktdatenblatt Config</title>
         <title lang="de-DE">Product Data Sheet Config</title>
 
